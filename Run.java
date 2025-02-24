@@ -39,7 +39,7 @@ class Vehicle {
 	double rating;
 	int numberOfRatings;
 	boolean isFeatured;
-	static double discount;
+	double discount;
 	
 	//	Constructor (for initializing Varialbles)
 	Vehicle(String brand, String model, double price, String fuelType, double mileage, int year) {
@@ -56,7 +56,7 @@ class Vehicle {
 		this.rating = 0;
 		this.numberOfRatings = 0;
 		this.isFeatured = false;
-		discount = 0;
+		this.discount = 0;
 	}
 	
 	//	Method to Display Details
@@ -80,8 +80,8 @@ class Vehicle {
 		this.numberOfRatings++;
 	}
 	
-	static void applyDiscount(double discount1) {
-		discount = discount1;
+	void applyDiscount(double discount) {
+		this.discount = discount;
 	}
 	 
 	void markAsFeatured() {
